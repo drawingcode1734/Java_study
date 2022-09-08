@@ -17,7 +17,7 @@ class Circle { // 좌표상의 위치 정보, 반지름의 길이 정보 저장 
     // 선언 및 생성으로 메소드 안에서만 해주면
     // 메소드 내에서만 동작할 수 있고 밖에선 사용할 수 없기 때문
 
-    public void Circle(int x, int y, int r) { // 이 메소드는 클래스 이름과 같이 만들어 생성자 메소드로 표현하는 것이 좋다.
+    public Circle(int x, int y, int r) { // 이 메소드는 클래스 이름과 같이 만들어 생성자 메소드로 표현하는 것이 좋다.
         // 원래는 setRad 라고 메소드 이름 만들었었음 T-T,,, 아직 익숙하지 않은 것 같다
         center = new Point(x, y); // Point 클래스의 변수에 접근하기 위해서 인스턴스 생성한다는 점이 가장 중요
         if(r < 0) {
@@ -37,9 +37,8 @@ class Circle { // 좌표상의 위치 정보, 반지름의 길이 정보 저장 
 
 public class CircleTest {
     public static void main(String[] args) {
-        Circle c = new Circle();
-        c.Circle(14,6,8);
+        Circle c = new Circle(14, 6, 8);
+        //c.Circle(14,6,8); 나는 바보야..
         c.showCircleInfo();
-
     }
 }
